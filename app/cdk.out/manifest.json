@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c8c2af99c608375019f33d8c16a476f5a25f1a5d45c80ab5c6760934473112fa.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/b7c2b031dfdfdb857cd96b2c877a6b9135f79d8079d63b779e1a4b55ec4b6211.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -34,15 +34,16 @@
         "AppStack.assets"
       ],
       "metadata": {
-        "/AppStack/cdk_speakers_2025": [
+        "/AppStack/cdkspeakers2025": [
           {
             "type": "aws:cdk:analytics:construct",
             "data": {
+              "bucketName": "*",
               "encryption": "KMS"
             }
           }
         ],
-        "/AppStack/cdk_speakers_2025/Key": [
+        "/AppStack/cdkspeakers2025/Key": [
           {
             "type": "aws:cdk:analytics:construct",
             "data": {
@@ -51,16 +52,171 @@
             }
           }
         ],
-        "/AppStack/cdk_speakers_2025/Key/Resource": [
+        "/AppStack/cdkspeakers2025/Key/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "cdkspeakers2025KeyC82BB00C"
+            "data": "cdkspeakers2025Key48C79A4A"
           }
         ],
-        "/AppStack/cdk_speakers_2025/Resource": [
+        "/AppStack/cdkspeakers2025/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "cdkspeakers20252D1CCAA2"
+            "data": "cdkspeakers202570196660"
+          }
+        ],
+        "/AppStack/SqsLambdaDemoQueue": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "visibilityTimeout": "*"
+            }
+          }
+        ],
+        "/AppStack/SqsLambdaDemoQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SqsLambdaDemoQueue5B3841CC"
+          }
+        ],
+        "/AppStack/SQSLambda": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "code": "*",
+              "handler": "*",
+              "runtime": "*"
+            }
+          }
+        ],
+        "/AppStack/SQSLambda/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToPrincipalPolicy": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachInlinePolicy": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachInlinePolicy": [
+                "*"
+              ]
+            }
+          }
+        ],
+        "/AppStack/SQSLambda/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/AppStack/SQSLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSLambdaServiceRoleC4E9E285"
+          }
+        ],
+        "/AppStack/SQSLambda/ServiceRole/DefaultPolicy": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachToRole": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachToRole": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addStatements": [
+                {}
+              ]
+            }
+          }
+        ],
+        "/AppStack/SQSLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSLambdaServiceRoleDefaultPolicy42F31AC5"
+          }
+        ],
+        "/AppStack/SQSLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSLambda72CB3E44"
+          }
+        ],
+        "/AppStack/SQSLambda/LogGroup": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "logGroupName": "*"
+            }
+          }
+        ],
+        "/AppStack/SQSLambda/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSLambdaLogGroupFFA024EE"
+          }
+        ],
+        "/AppStack/SQSLambda/SqsEventSource:AppStackSqsLambdaDemoQueue11438DDA": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "target": "*",
+              "batchSize": "*",
+              "maxBatchingWindow": "*",
+              "maxConcurrency": "*",
+              "reportBatchItemFailures": "*",
+              "enabled": "*",
+              "eventSourceArn": "*",
+              "filters": "*",
+              "filterEncryption": "*",
+              "metricsConfig": "*"
+            }
+          }
+        ],
+        "/AppStack/SQSLambda/SqsEventSource:AppStackSqsLambdaDemoQueue11438DDA/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SQSLambdaSqsEventSourceAppStackSqsLambdaDemoQueue11438DDA6D64E05B"
           }
         ],
         "/AppStack/CDKMetadata/Default": [

@@ -32,3 +32,15 @@ https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-python.html
 https://iriscompanyio.medium.com/how-to-set-up-and-use-multiple-aws-profiles-using-aws-cli-00881cf93f4c
 
 
+#### Construct Hub
+https://constructs.dev/
+
+https://github.com/cdklabs/construct-hub
+
+Create Table 
+
+Create Bucket 
+
+Create Function 
+
+(Laym fun => Dynamo Db => S3)

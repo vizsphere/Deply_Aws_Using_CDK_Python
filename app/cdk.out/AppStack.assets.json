@@ -1,16 +1,30 @@
 {
   "version": "48.0.0",
   "files": {
-    "c8c2af99c608375019f33d8c16a476f5a25f1a5d45c80ab5c6760934473112fa": {
+    "c6481b845f4fb601dfa70d0b9c39e443c43ab5ed6b58db9ad6f0fb67eb1dc51b": {
+      "displayName": "SQSLambda/Code",
+      "source": {
+        "path": "asset.c6481b845f4fb601dfa70d0b9c39e443c43ab5ed6b58db9ad6f0fb67eb1dc51b",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "current_account-current_region-a0fd679a": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "c6481b845f4fb601dfa70d0b9c39e443c43ab5ed6b58db9ad6f0fb67eb1dc51b.zip",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "b7c2b031dfdfdb857cd96b2c877a6b9135f79d8079d63b779e1a4b55ec4b6211": {
       "displayName": "AppStack Template",
       "source": {
         "path": "AppStack.template.json",
         "packaging": "file"
       },
       "destinations": {
-        "current_account-current_region-2aedd505": {
+        "current_account-current_region-307253d4": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "c8c2af99c608375019f33d8c16a476f5a25f1a5d45c80ab5c6760934473112fa.json",
+          "objectKey": "b7c2b031dfdfdb857cd96b2c877a6b9135f79d8079d63b779e1a4b55ec4b6211.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
